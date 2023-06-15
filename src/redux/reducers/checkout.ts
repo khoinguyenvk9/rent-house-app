@@ -1,19 +1,23 @@
+import { IHouse } from "@/types/house";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface ICheckoutState {
-  theme?: "dark" | "light";
+  house?: IHouse;
 }
 
 const initialState: ICheckoutState = {
-  theme: "dark",
+  house: undefined,
 };
 
 export const checkoutSlice = createSlice({
-  name: "settings",
+  name: "checkout",
   initialState,
   reducers: {
     resetCheckout: (state: ICheckoutState) => {
-      state.theme = "dark";
+      state.house = undefined;
+    },
+    setHouse: (state: ICheckoutState, action: PayloadAction<IHouse>) => {
+      state.house = action.payload;
     },
   },
 });

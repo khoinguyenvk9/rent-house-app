@@ -4,7 +4,7 @@ const DEFAULT_TAG = "img";
 type ImageTagProps = ComponentProps<typeof DEFAULT_TAG>;
 
 type ImageProps = {
-  aspectRatio?: "16/9" | "1/1" | string;
+  aspectRatio?: "16/9" | "1/1" | "auto" | string;
 } & ImageTagProps;
 
 export const Image: FC<ImageProps> = (props) => {

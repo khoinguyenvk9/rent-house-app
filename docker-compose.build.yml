@@ -1,0 +1,11 @@
+
+version: "3"
+
+services:
+  build:
+    # comment next line if your device is not mac m1
+    # platform: linux/x86_64
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: reg.mana.vn/rental_house_app
